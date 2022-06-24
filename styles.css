@@ -7,6 +7,10 @@ It is used by all pages to give the site a consistent look and feel.
 */
 
 /*-------------------------------General Layout------------------------------*/
+.hidden {
+  display: none;
+}
+
 body, nav {
   background-color: #48978c;
 }
@@ -14,7 +18,7 @@ body, nav {
 main {
   display: flex;
   background-color: #8ac4bd;
-  min-width: 550px;
+  min-width: 600px;
   padding: 20px 0px 20px 20px;
   justify-content: center;
 }

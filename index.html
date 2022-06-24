@@ -3,7 +3,7 @@
   Name: Kyla Yu-Swanson
   CS 132 Spring 2022
   Date: April 7, 2022
-  This is the home.html page for my portfolio of web development work.
+  This is the home page for my portfolio of web development work.
   It includes links to side projects I have done during CS 132,
   including an page about the squirrels that live at Caltech.
 -->
@@ -19,6 +19,9 @@
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index-styles.css" />
+    <script src="helpers.js"></script>
+    <script defer src="index.js"></script>
     <title>Kyla's Projects: Home</title>
   </head>
   <body>
@@ -30,6 +33,7 @@
         <h2>Pages</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="art-gallery.html">Art Gallery</a></li>
           <li><a href="squirrels.html">Caltech Squirrels</a></li>
           <li><a href="puzzle.html">Puzzle Game</a></li>
           <li><a href="dog-playlist.html">Dog Playlist</a></li>
@@ -46,22 +50,33 @@
             (El) Hovik in 2022.
           </p>
         </article>
-        <article>
-          <h2>Contact</h2>
-          <ul>
-            <li><a href="https://www.linkedin.com/in/kyla-yu-swanson-947a941bb/">LinkedIn</a></li>
-            <li><strong>Email:</strong> kyla.yu.swanson@gmail.com</li>
-            <li><strong>Phone:</strong> 619-677-7717</li>
-          </ul>
-        </article>
+        <section>
+          <article>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/kyla-yu-swanson-947a941bb/">LinkedIn</a></li>
+              <li><strong>Email:</strong> kyla.yu.swanson@gmail.com</li>
+              <li>
+                More projects on <a href="https://github.com/kylays">GitHub</a>
+              </li>
+            </ul>
+          </article>
+          <div id="slides-gallery">
+            <img class="hide" src="imgs/horiz-placeholder.png" alt="TODO">
+            <img class="hide" src="imgs/vert-placeholder.png" alt="TODO">
+            <img class="hide" src="imgs/horiz-placeholder.png" alt="TODO">
+            <div>
+              <button id="prev-btn">&#10094;</button>
+              <button id="next-btn">&#10095;</button>
+            </div>
+          </div>
+        </section>
         <article>
           <h2>Resume</h2>
           <h3>Education</h3>
           <ul>
             <li>
-              <strong>
-                California Institute of Technology (Caltech) in Pasadena, CA:
-              </strong>
+              <strong>California Institute of Technology (Caltech) in Pasadena, CA:</strong>
               Graduation in 2024
               <ul>
                 <li><strong>Major:</strong> Computer Science</li>
@@ -84,15 +99,19 @@
           </ul>
           <h3>Technical Skills</h3>
           <ul>
-            <li><strong>Languages:</strong> Java, Python, C / C++ / C#, OCaml,
-              MATLAB, Mathematica</li>
+            <li>
+              <strong>Languages:</strong> Java, Python, C / C++ / C#, OCaml, MATLAB, Mathematica
+            </li>
+            <li>
+              <strong>Web Development:</strong> HTML, JavaScript, CSS, AJAX, Node.js, Express
+            </li>
             <li><strong>Version Control:</strong> SVN, Git</li>
           </ul>
           <h3>Experience</h3>
           <ul>
             <li>
               <strong>
-                NASA JPL Sea Level and Ice Group Internship (January 2021 - September 2021):
+                NASA JPL Sea Level &amp; Ice Group Internship (January 2021 - September 2021):
               </strong>
               Designed coastline meshing capabilities to estimate coastline
               migration over large time scales (50+ years) with accuracy within
@@ -124,14 +143,14 @@
           <h3>Projects</h3>
           <ul>
             <li>
-              <strong>2D Physics Engine, C (2021):</strong> Coded a 2D physics
+              <strong>2D Physics Engine &amp; Game, C (2021):</strong> Coded a 2D physics
               engine that implements collisions (elastic and destructive), Newtonian
               gravity, spring forces. Team of four. Resulting game available
               <a href="http://www.its.caltech.edu/~blank/cs3-21sp/covid_to_defense.html">here</a>.
-              The code is available <a href="https://github.com/kylays/covid-to-defense">here</a>
+              The code is available <a href="https://github.com/kylays/covid-to-defense">here</a>.
             </li>
             <li>
-              <a href="https://github.com/kylays">GitHub</a>
+              More projects on <a href="https://github.com/kylays">GitHub</a>
             </li>
           </ul>
           <h3>Hobbies: Public Art Projects</h3>

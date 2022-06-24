@@ -1,0 +1,64 @@
+ /*
+Name: Kyla Yu-Swanson
+Date: June, 2022
+
+This is a styles page for the home page. It handles the slides gallery.
+*/
+
+div > section {
+  display: flex;
+  padding: 15px 0px;
+  justify-content: center;
+}
+
+article {
+  margin: 20px;
+}
+
+/*************************** Slides Gallery ****************************/
+.hide {
+  display: none;
+}
+
+#slides-gallery > img, #prev-btn, #next-btn {
+  width: 100%;
+  border-radius: 25px;
+}
+
+#slides-gallery {
+  margin: auto 0px auto 50px;
+  padding-bottom: 0px;
+}
+
+#prev-btn, #next-btn {
+  cursor: pointer;
+  width: 50px;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#slides-gallery > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+#next-btn {
+  right: 0;
+}
+
+#prev-btn {
+  left: 0;
+}
+
+#prev-btn:hover, #next-btn:hover {
+  background-color: #48978c;
+}
+
+#prev-btn, #next-btn {
+  background-color: transparent;
+  border-color: transparent;
+}

@@ -1,0 +1,1 @@
+// TODO - individual view when click on a picture to learn more

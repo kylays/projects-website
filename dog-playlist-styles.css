@@ -34,7 +34,6 @@ div > figure > img, #search > button {
 #search {
   display: flex;
   justify-content: center;
-  text-align: center;
 }
 
 #search > * {

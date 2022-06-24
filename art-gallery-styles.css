@@ -1,0 +1,17 @@
+/*
+Name: Kyla Yu-Swanson
+Date: June, 2022
+This is the CSS file page for my page that displays art projects I've worked on.
+*/
+
+#gallery {
+  columns: 3;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+img {
+  margin: 0px 0px 10px 0px;
+  width: 100%;
+  border-radius: 10px;
+} 
