@@ -38,11 +38,30 @@
         </ul>
       </nav>
       <div>
-        <h1>Dog Playlist</h1>
+        <h2>Dog Playlist</h2>
         <hr />
+        <section>
+          <h3>About</h3>
+          <p>
+            This website generates a playlist where each song is based off of a 
+            letter in a random dog breed chosen from the <a href="https://dog.ceo/dog-api/">Dog API</a>. 
+            The songs are found using the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>. 
+            Many songs have a playable snippet, but if the play and pause buttons 
+            are missing, the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> 
+            was missing a preview of the song.
+          </p>     
+          <div id="search">
+            <h3>
+              Generate a New Dog Playlist:
+            </h3>
+            <select>
+              <!--To be filled with genre options dynamically-->
+            </select>
+            <button>Go!</button>
+          </div>
+        </section>
         <div></div>
         <article id="playlist"></article>
-        <button id="new-dp-btn">New Dog Playlist</button>
       </div>
     </main>
     <footer>

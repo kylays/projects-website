@@ -38,7 +38,7 @@ hr {
   height: 1px;
 }
 
-ul, p, nav, button, figcaption {
+ul, p, nav, button, figcaption, select {
   font-size: 15px;
   font-family: 'Space Mono', 'PT Mono', monospace;
 }
@@ -52,7 +52,7 @@ footer, nav > h2, header > h1 {
 }
 
 a, a:visited {
-  color: rgb(0, 98, 85);
+  color: rgb(0, 66, 57);
   text-decoration: none;
   font-weight: bold;
 }
@@ -94,7 +94,7 @@ h3 {
 
 /*------------------------------Navigation Bar-------------------------------*/
 nav {
-  width: 10%;
+  width: 13%;
   min-width: 125px;
 }
 
@@ -104,4 +104,5 @@ nav > h2 {
 
 nav > ul {
   padding-left: 25%;
+  padding-right: 5%;
 }
