@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+  Name: Kyla Yu-Swanson
+  CS 132 Spring 2022
+  Date: May 15, 2022
+  This page generates a playlist based off the breed of a random dog and songs that 
+  each start with a letter of the breed name. It uses the Dog API and Spotify API.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Tourney:wght@100&family=Vast+Shadow&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dog-playlist-styles.css" />
+    <script src="helpers.js"></script>
+    <script defer src="dog-playlist.js"></script>
+    <title>Kyla's Projects: Dog Playlist</title>
+  </head>
+  <body>
+    <header>
+      <h1>Kyla's Web Development Projects</h1>
+    </header>
+    <main>
+      <nav>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="squirrels.html">Caltech Squirrels</a></li>
+          <li><a href="puzzle.html">Puzzle Game</a></li>
+          <li><a href="dog-playlist.html">Dog Playlist</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h1>Dog Playlist</h1>
+        <hr />
+        <div></div>
+        <article id="playlist"></article>
+        <button id="new-dp-btn">New Dog Playlist</button>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Written by Kyla Yu-Swanson (May 2022) | Uses <a href="https://dog.ceo/dog-api/">Dog API</a> 
+        and <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+/*
+Name: Kyla Yu-Swanson
+CS 132 Spring 2022
+Date: April 7, 2022
+This is the squirrels-styles.css page for my page about Caltech Squirrels.
+It is used to style the picture gallery of squirrels.
+*/
+
+/*---------------------------------Gallery-----------------------------------*/
+figcaption {
+  font-size: 15px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+figure {
+  width: 25%;
+  min-width: 200px;
+}

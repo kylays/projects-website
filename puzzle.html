@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+  Name: Kyla Yu-Swanson
+  CS 132 Spring 2022
+  Date: April 23, 2022
+  This is puzzle game I created to showcase my use of Javascript.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Tourney:wght@100&family=Vast+Shadow&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="puzzle-styles.css" />
+    <script src="helpers.js"></script>
+    <script defer src="puzzle.js"></script>
+    <title>Kyla's Projects: Puzzle Game</title>
+  </head>
+  <body>
+    <header>
+      <h1>Kyla's Web Development Projects</h1>
+    </header>
+    <main>
+      <nav>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="squirrels.html">Caltech Squirrels</a></li>
+          <li><a href="puzzle.html">Puzzle Game</a></li>
+          <li><a href="dog-playlist.html">Dog Playlist</a></li>
+        </ul>
+      </nav>
+      <div>
+        <div id="menu-view">
+          <h1>Drag and Drop Puzzle</h1>
+          <hr />
+          <article>
+            <h2>Rules</h2>
+            <p>
+              Drag and drop the pictures from the pieces bank to the grid to make 
+              a full image from the pieces.
+            </p>
+          </article>
+          <div>
+            <div id="difficulty-buttons">
+              <h2>Choose a Difficulty Level and Start the Game!</h2>
+              <div>
+                <button id="easy-button">Easy</button>
+                <button id="medium-button">Medium</button>
+                <button id="hard-button">Hard</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Website used to split the images: https://postcron.com/image-splitter/editor/en/upload-image-->
+        <div id="easy-view" class="game hidden">
+          <button class="menu-button">Back to Menu</button>
+          <div class="grid">
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+          </div>
+          <div class="pieces-bank">
+            <img id="easy-2" class="piece" draggable="true" src="puzzle-pieces/easy-2.jpg" alt="puzzle piece">
+            <img id="easy-4" class="piece" draggable="true" src="puzzle-pieces/easy-4.jpg" alt="puzzle piece">
+            <img id="easy-3" class="piece" draggable="true" src="puzzle-pieces/easy-3.jpg" alt="puzzle piece">
+            <img id="easy-1" class="piece" draggable="true" src="puzzle-pieces/easy-1.jpg" alt="puzzle piece">
+          </div>
+        </div>
+        <div id="medium-view" class="game hidden">
+          <button class="menu-button">Back to Menu</button>
+          <div class="grid">
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+          </div>
+          <div class="pieces-bank">
+            <img id="medium-7" class="piece" draggable="true" src="puzzle-pieces/medium-7.jpg" alt="puzzle piece">
+            <img id="medium-2" class="piece" draggable="true" src="puzzle-pieces/medium-2.jpg" alt="puzzle piece">
+            <img id="medium-8" class="piece" draggable="true" src="puzzle-pieces/medium-8.jpg" alt="puzzle piece">
+            <img id="medium-1" class="piece" draggable="true" src="puzzle-pieces/medium-1.jpg" alt="puzzle piece">
+            <img id="medium-4" class="piece" draggable="true" src="puzzle-pieces/medium-4.jpg" alt="puzzle piece">
+            <img id="medium-9" class="piece" draggable="true" src="puzzle-pieces/medium-9.jpg" alt="puzzle piece">
+            <img id="medium-6" class="piece" draggable="true" src="puzzle-pieces/medium-6.jpg" alt="puzzle piece">
+            <img id="medium-3" class="piece" draggable="true" src="puzzle-pieces/medium-3.jpg" alt="puzzle piece">
+            <img id="medium-5" class="piece" draggable="true" src="puzzle-pieces/medium-5.jpg" alt="puzzle piece">
+          </div>
+        </div>
+        <div id="hard-view" class="game hidden">
+          <button class="menu-button">Back to Menu</button>
+          <div class="grid">
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+            <div class="grid-square"></div>
+          </div>
+          <div class="pieces-bank">
+            <img id="hard-13" class="piece" draggable="true" src="puzzle-pieces/hard-13.jpg" alt="puzzle piece">
+            <img id="hard-1" class="piece" draggable="true" src="puzzle-pieces/hard-1.jpg" alt="puzzle piece">
+            <img id="hard-4" class="piece" draggable="true" src="puzzle-pieces/hard-4.jpg" alt="puzzle piece">
+            <img id="hard-8" class="piece" draggable="true" src="puzzle-pieces/hard-8.jpg" alt="puzzle piece">
+            <img id="hard-3" class="piece" draggable="true" src="puzzle-pieces/hard-3.jpg" alt="puzzle piece">
+            <img id="hard-11" class="piece" draggable="true" src="puzzle-pieces/hard-11.jpg" alt="puzzle piece">
+            <img id="hard-5" class="piece" draggable="true" src="puzzle-pieces/hard-5.jpg" alt="puzzle piece">
+            <img id="hard-10" class="piece" draggable="true" src="puzzle-pieces/hard-10.jpg" alt="puzzle piece">
+            <img id="hard-14" class="piece" draggable="true" src="puzzle-pieces/hard-14.jpg" alt="puzzle piece">
+            <img id="hard-9" class="piece" draggable="true" src="puzzle-pieces/hard-9.jpg" alt="puzzle piece">
+            <img id="hard-2" class="piece" draggable="true" src="puzzle-pieces/hard-2.jpg" alt="puzzle piece">
+            <img id="hard-15" class="piece" draggable="true" src="puzzle-pieces/hard-15.jpg" alt="puzzle piece">
+            <img id="hard-7" class="piece" draggable="true" src="puzzle-pieces/hard-7.jpg" alt="puzzle piece">
+            <img id="hard-12" class="piece" draggable="true" src="puzzle-pieces/hard-12.jpg" alt="puzzle piece">
+            <img id="hard-6" class="piece" draggable="true" src="puzzle-pieces/hard-6.jpg" alt="puzzle piece">
+            <img id="hard-16" class="piece" draggable="true" src="puzzle-pieces/hard-16.jpg" alt="puzzle piece">
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Written by Kyla Yu-Swanson, Art by Kyla Yu-Swanson (April 2022)
+      </p>
+    </footer>
+  </body>
+</html>

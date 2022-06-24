@@ -1,0 +1,107 @@
+/*
+Name: Kyla Yu-Swanson
+CS 132 Spring 2022
+Date: April 7, 2022
+This is the styles.css page for my portfolio of web development work.
+It is used by all pages to give the site a consistent look and feel.
+*/
+
+/*-------------------------------General Layout------------------------------*/
+body, nav {
+  background-color: #48978c;
+}
+
+main {
+  display: flex;
+  background-color: #8ac4bd;
+  min-width: 550px;
+  padding: 20px 0px 20px 20px;
+  justify-content: center;
+}
+
+main, nav {
+  border-radius: 15px;
+}
+
+section, main > div {
+  padding: 20px;
+}
+
+main > div {
+  width: 75%;
+}
+
+/*---------------------------------Text--------------------------------------*/
+hr {
+  background-color: black;
+  border: none;
+  height: 1px;
+}
+
+ul, p, nav, button, figcaption {
+  font-size: 15px;
+  font-family: 'Space Mono', 'PT Mono', monospace;
+}
+
+ul {
+  list-style-type: square;
+}
+
+footer, nav > h2, header > h1 {
+  text-align: center;
+}
+
+a, a:visited {
+  color: rgb(0, 98, 85);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav > ul > li > a, nav > ul > li > a:visited {
+  color: black;
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*--------------------------------Headers------------------------------------*/
+header > h1 {
+  font-family: 'Bungee Shade', 'Tourney', 'Vast Shadow', cursive;
+}
+
+h1, h2, h3 {
+  font-family: monospace;
+}
+
+h1, h3 {
+  margin: 5px 0px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 10px 0px 5px 0px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+/*------------------------------Navigation Bar-------------------------------*/
+nav {
+  width: 10%;
+  min-width: 125px;
+}
+
+nav > h2 {
+  margin: 10%;
+}
+
+nav > ul {
+  padding-left: 25%;
+}

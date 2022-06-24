@@ -1,0 +1,116 @@
+/*
+Name: Kyla Yu-Swanson
+CS 132 Spring 2022
+Date: April 23, 2022
+
+This is the puzzle-styles.css page for my page that features a drag and drop puzzle.
+*/
+
+/*--------------------------------MENU---------------------------------*/
+#difficulty-buttons > div {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto 0px auto;
+  max-width: 400px;
+}
+
+#difficulty-buttons > h2 {
+  text-align: center;
+  margin: 0px 10px 10px 10px;
+}
+
+#difficulty-buttons {
+  padding: 15px;
+  max-width: 500px;
+}
+
+#menu-view > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+#difficulty-buttons, .pieces-bank {
+  border: solid black 2px;
+  border-radius: 15px;
+}
+
+/*--------------------------------GAME---------------------------------*/
+.game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.game > * {
+  margin: 10px;
+}
+
+.pieces-bank > img {
+  min-width: 75px;
+  max-width: 100px;
+  margin: 5px;
+}
+
+/*--------------------------------PIECES---------------------------------*/
+.piece {
+  cursor: pointer;
+}
+
+.pieces-bank {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 5px;
+  min-height: 115px;
+  min-width: 300px;
+  max-width: 750px;
+}
+
+/*--------------------------------GRID---------------------------------*/
+.grid-square, .grid {
+  border: solid black 1px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.grid-square > img {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  width: 360px;
+  height: 360px;
+}
+
+#easy-view > .grid {
+  grid-template-columns: 180px 180px;
+  grid-template-rows: 180px 180px;
+}
+
+#medium-view > .grid {
+  grid-template-columns: 120px 120px 120px;
+  grid-template-rows: 120px 120px 120px;
+}
+
+#hard-view > .grid {
+  grid-template-columns: 90px 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px 90px;
+}
+
+/*--------------------------------MISC---------------------------------*/
+button {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.drag-over {
+  border: dashed 2px black;
+}

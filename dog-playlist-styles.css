@@ -1,0 +1,108 @@
+/*
+Name: Kyla Yu-Swanson
+CS 132 Spring 2022
+Date: May 15, 2022
+This is the CSS file page for my page that generates a dog playlist.
+It is used to style the page's playlist view. 
+*/
+
+div > figure {
+  max-width: 500px;
+  margin: 25px auto 0px auto;
+}
+
+div > figure > figcaption {
+  font-style: italic;
+  text-align: center;
+}
+
+div > figure > img {
+  height: 250px;
+  margin: 5px auto;
+}
+
+div > figure > img, #new-dp-btn {
+  display: block;
+}
+
+#new-dp-btn {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin: 0px auto; 
+}
+
+/*------------------------------- Playlist ----------------------------*/
+.selected {
+  border: 5px solid black;
+}
+
+img, #playlist > section, #new-dp-btn {
+  border-radius: 10px;
+}
+
+.song > div, .song > figure, .song {
+  display: flex;
+}
+
+.song {
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: left;
+}
+
+#playlist > section {
+  height: 115px;
+  padding: 0px 15px;
+  margin: 15px;
+}
+
+.blank, .song > div > button {
+  background-color: transparent;
+}
+
+#playlist {
+  margin: 15px auto;
+  padding: 15px;
+  max-width: 600px;;
+}
+
+.song > figure {
+  margin: 0px 10px;
+  width: 475px;
+}
+
+.song > figure > figcaption {
+  margin: auto 0px auto 15px;
+}
+
+.song > figure > img {
+  margin: 15px 0px;
+}
+
+.song > figure > figcaption > p {
+  margin: 0px;
+}
+
+.song > div > button {
+  border-color: transparent;
+  width: 45px;
+}
+
+.song > div > button > img {
+  width: 100%;
+}
+
+.song > div {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.song > p {
+  margin: auto 5px;
+  font-size: 30px;
+  width: 20px;
+}
+
+audio {
+  display: none;
+}
