@@ -30,6 +30,10 @@ article {
   padding-bottom: 0px;
 }
 
+img, #slides-gallery {
+  max-height: 350px;
+}
+
 #prev-btn, #next-btn {
   cursor: pointer;
   width: 50px;
