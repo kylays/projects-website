@@ -1,0 +1,20 @@
+{
+  "name": "projects-website",
+  "version": "1.0.0",
+  "description": "This is a website created to host some personal projects I made for fun. It was \r started while taking CS 132 at Caltech as I was learning web development, and is \r updated with more cool things as I make them! To view the website, please clone \r the repo and open one of the HTML files in your preferred browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylays/projects-website.git"
+  },
+  "author": "Kyla Yu-Swanson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylays/projects-website/issues"
+  },
+  "homepage": "https://github.com/kylays/projects-website#readme"
+}
