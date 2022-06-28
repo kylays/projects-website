@@ -9,6 +9,7 @@
   "use strict";
 
   const DOG_URL = "https://dog.ceo/api/";
+  const DOG_BREEDS_URL = DOG_URL + "breeds/list/all";
   const CLIENT_ID = "9ae0f4eda5b340ba8a442a34d1c34615";
   const CLIENT_SECRET = "97b89b5a83114fa197cb526f38692869";
   const SPOTIFY_BASE = "https://api.spotify.com/v1";
@@ -25,7 +26,7 @@
     accessToken = await getSpotifyToken();
     populateMenu();
     qs("#search > button").addEventListener("click", generatePlaylist);
-    generatePlaylist();
+    // generatePlaylist();
   }
 
   /**
@@ -60,19 +61,45 @@
     }
   }
 
-/**
- * Dynamically fills in the genre menu.
- */
-async function populateMenu() {
-  let menu = qs("#search > select");
-  let types = await getGenres();
-  for (let i = 0; i < types.length; i++) {
-    let option = gen("option");
-    option.value = types[i];
-    option.textContent = types[i];
-    menu.appendChild(option);
+  /**
+   * Dynamically fills in the genre and breed menus.
+   */
+  async function populateMenu() {
+    breedMenu();
+    genreMenu();
   }
-}
+
+  /**
+   * Populate the breed menu.
+   */
+  async function breedMenu() {
+    let menu = id("breed");
+    let option = gen("option");
+    option.value = "random";
+    option.textContent = "random";
+    menu.appendChild(option);
+    let types = await getBreeds();
+    for (let i = 0; i < types.length; i++) {
+      option = gen("option");
+      option.value = types[i];
+      option.textContent = types[i];
+      menu.appendChild(option);
+    }
+  }
+
+  /**
+   * Populate the genre menu.
+   */
+  async function genreMenu() {
+    let menu = id("genre");
+    let types = await getGenres();
+    for (let i = 0; i < types.length; i++) {
+      let option = gen("option");
+      option.value = types[i];
+      option.textContent = types[i];
+      menu.appendChild(option);
+    }
+  }
 
   /**
    * Clears the playlist specific details.
@@ -89,8 +116,13 @@ async function populateMenu() {
    */
   async function generatePlaylist() {
     clearHTML();
-    let data = await fetchOneDog();
-    let breed = processDogJson(data);
+    let breed = qs("#breed").value;
+    let url = DOG_URL + "breed/" + breed + "/images/random";
+    if (breed.toUpperCase() === "RANDOM") {
+      url = DOG_URL + "breeds/image/random";
+    }
+    let data = await fetchOneDog(url);
+    breed = processDogJson(data);
     await makeSongSections(breed);
   }
 
@@ -125,11 +157,11 @@ async function populateMenu() {
   }
 
   /**
-   * Fetches one random dog image from the Dog API.
+   * Fetches one dog image from the Dog API.
+   * @param {string} url - url to fetch the dog
    */
-  async function fetchOneDog() {
+  async function fetchOneDog(url) {
     try {
-      const url = DOG_URL + "breeds/image/random";
       let resp = await fetch(url);
       resp = checkStatus(resp);
       const data = await resp.json();
@@ -279,7 +311,7 @@ async function populateMenu() {
     try {
       let offset = Math.floor(Math.random() * MAX_OFFSET);
       letter = encodeURIComponent(letter);
-      let genre = qs("#search > select").value;
+      let genre = qs("#genre").value;
       let resp = await fetch(SPOTIFY_BASE + '/search?q=genre:"' 
         + genre + '"track:' + letter + '%25&type=track&market=US&limit=1&offset=' 
         + offset + '&include_external=audio', {
@@ -300,7 +332,7 @@ async function populateMenu() {
 
   /**
    * Fetches genres from the Spotify API.
-   * @returns 
+   * @returns {array} - list of genres available in Spotify API
    */
   async function getGenres() {
     try {
@@ -315,6 +347,28 @@ async function populateMenu() {
       resp = checkStatus(resp);
       const data = await resp.json();
       return data.genres;
+    } catch (err) {
+      handleRequestError(err);
+    }
+  }
+
+  /**
+   * Fetches dog breeds from Dog API.
+   * @returns {array} - list of dog breeds available on Dog API.
+   */
+  async function getBreeds() {
+    try {
+      let resp = await fetch(DOG_BREEDS_URL);
+      resp = checkStatus(resp);
+      const data = await resp.json();
+      let breeds = [];
+      for (var breed of Object.keys(data.message)) {
+        breeds.push(breed);
+        for (let i = 0; i < data.message[breed].length; i++) {
+          breeds.push(breed + "/" + data.message[breed][i]);
+        }
+      }
+      return breeds;
     } catch (err) {
       handleRequestError(err);
     }

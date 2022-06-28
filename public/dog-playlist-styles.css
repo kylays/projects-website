@@ -25,7 +25,7 @@ div > figure > img, #search > button {
   display: block;
 }
 
-#search > button, #search > select {
+#search > button, #search > div > select {
   padding: 5px;
   background-color: black;
   color: #ddfffc;
@@ -37,8 +37,12 @@ div > figure > img, #search > button {
 }
 
 #search > * {
-  margin: auto 20px;
+  margin: auto 10px;
   border-color: transparent;
+}
+
+#search > div > * {
+  margin: 2px auto;
 }
 
 /*------------------------------- Playlist ----------------------------*/
@@ -46,7 +50,7 @@ div > figure > img, #search > button {
   border: 5px solid black;
 }
 
-img, #playlist > section, #search > button, #search > select {
+img, #playlist > section, #search > button, #search > div > select {
   border-radius: 10px;
 }
 

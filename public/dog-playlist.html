@@ -46,20 +46,26 @@
         <section>
           <h2>About</h2>
           <p>
-            This website generates a playlist where each song is based off of a 
-            letter in a random dog breed chosen from the <a href="https://dog.ceo/dog-api/">Dog API</a>. 
-            The songs are found using the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>. 
-            Many songs have a playable snippet, but if the play and pause buttons 
-            are missing, the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> 
+            This website generates a playlist where each song is based off of a letter in a 
+            selected dog breed or random dog breed chosen from the 
+            <a href="https://dog.ceo/dog-api/">Dog API</a>. The songs are found using the 
+            <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>. 
+            Many songs have a playable snippet, but if the play and pause buttons are missing, the 
+            <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> 
             was missing a preview of the song.
           </p>     
           <div id="search">
             <h3>
               Generate a New Dog Playlist:
             </h3>
-            <select>
-              <!--To be filled with genre options dynamically-->
-            </select>
+            <div>
+              <select id="breed">
+                <!--To be filled with dog options dynamically-->
+              </select>
+              <select id="genre">
+                <!--To be filled with genre options dynamically-->
+              </select>
+            </div>
             <button>Go!</button>
           </div>
         </section>
