@@ -107,7 +107,7 @@
   function clearHTML() {
     let container = qs('#playlist');
     removeAllChildNodes(container);
-    container = qs('div > div');
+    container = qs('#thumbnail');
     removeAllChildNodes(container);
   }
 
@@ -189,7 +189,7 @@
     let figcaption = gen('figcaption');
     figcaption.textContent = breed;
     figure.appendChild(figcaption);
-    qs('div > div').appendChild(figure);
+    qs('#thumbnail').appendChild(figure);
 
     return breed;
   }
