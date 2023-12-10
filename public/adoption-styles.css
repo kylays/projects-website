@@ -1,0 +1,18 @@
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+button {
+  padding: 10px;
+  border: solid black 2px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+}
+
+#button-spacer {
+  display: flex;
+  justify-content: center;
+}

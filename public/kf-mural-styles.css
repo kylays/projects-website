@@ -1,0 +1,16 @@
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#gallery > figure > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#gallery > figure {
+  width: 80%;
+  min-width: 400px;
+  margin: 10px;
+}

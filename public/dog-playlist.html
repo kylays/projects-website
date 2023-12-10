@@ -25,35 +25,30 @@
   </head>
   <body>
     <header>
-      <h1>Kyla's Web Development Projects</h1>
+      <h1>Kyla Yu-Swanson's Projects</h1>
     </header>
     <main>
       <nav>
         <h2>Pages</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="art-gallery.html">Art Gallery</a></li>
-          <li><a href="squirrels.html">Caltech Squirrels</a></li>
           <li><a href="puzzle.html">Puzzle Game</a></li>
           <li><a href="dog-playlist.html">Dog Playlist</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://kylays-caltech-critters.herokuapp.com/">Caltech Critters Adoption</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="https://kylays-animal-slot-machine.herokuapp.com/">Animal Slot Machine</a></li>
+          <li><a target="_blank" href="adoption.html">Caltech Critters Adoption</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://animal-slot-machine.onrender.com">Animal Slot Machine</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="http://www.its.caltech.edu/~blank/cs3-21sp/covid_to_defense.html">Tower Defense Game with 2D Physics Engine!</a></li>
+          <li><a href="art-gallery.html">Art Gallery</a></li>
+          <li><a href="heiva.html">Heiva Mural</a></li>
+          <li><a href="kf-mural.html">Kendall Frost Mural</a></li>
+          <li><a href="squirrels.html">Caltech Squirrels</a></li>
         </ul>
       </nav>
       <div>
         <h1>Dog Playlist</h1>
         <hr />
         <section>
-          <h2>About</h2>
-          <p>
-            This website generates a playlist where each song is based off of a letter in a 
-            selected dog breed or random dog breed chosen from the 
-            <a href="https://dog.ceo/dog-api/">Dog API</a>. The songs are found using the 
-            <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>. 
-            Many songs have a playable snippet, but if the play and pause buttons are missing, the 
-            <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> 
-            was missing a preview of the song.
-          </p>     
+          <div id="thumbnail"></div>
+          <article id="playlist"></article>
           <div id="search">
             <h3>
               Generate a New Dog Playlist:
@@ -68,14 +63,57 @@
             </div>
             <button>Go!</button>
           </div>
+          
         </section>
-        <div id="thumbnail"></div>
-        <article id="playlist"></article>
+        <section>
+          <h2>About</h2>
+          <p>
+            This project combines peoples' love for music and dogs! The page
+            generates a playlist where each song is based off of a letter in a
+            selected dog breed or random dog breed chosen from the 
+            <a href="https://dog.ceo/dog-api/">Dog API</a>. This API has many
+            pictures for each dog breed, so one is chosen randomly within the
+            breed. The songs are found using the 
+            <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>.
+            The songs are chosen randomly from the list of the current top 500
+            most popular songs in the selected genre. Many songs have a playable
+            snippet, but if the play and pause buttons are missing, the 
+            <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a> 
+            is missing a preview clip of the song.
+          </p> 
+          <p>
+            The wireframe below is an initial concept design for the 'Dog 
+            Playlist.' This design was altered in specific ways to increase
+            usability and make the page more interactive.
+          </p>
+          <p> 
+            A major change is the upgrade of then "new dog playlist" button
+            to the dog breed and genre menus and the "Go!"" button. This change
+            allows for a more interactive and customizable experience. Please
+            also note the placement of the buttons. They are placed at the
+            bottom of the playlist once a playlist is generated to follow along
+            the user experience of scrolling down the page to look at the playlist
+            song by song. At the end of this process, people will likely
+            be ready to make a new playlist and can easily access the buttons. 
+          </p>  
+          <p>
+            Another change to the initial wireframe
+            is including pause buttons. Initially, I only included play
+            buttons in the design, but once working on the webpage, I realized
+            that pause buttons were necessary so people could listen to
+            multiple snippets without the music overlapping. 
+          </p>
+          <article id="gallery">
+            <figure class="wireframe">
+              <img src="wireframes/dog-playlist-wireframe.jpg" alt="wireframe for dog playlist">
+            </figure>
+          </article> 
+        </section>
       </div>
     </main>
     <footer>
       <p>
-        Written by Kyla Yu-Swanson (May 2022) | Uses <a href="https://dog.ceo/dog-api/">Dog API</a> 
+        Written by Kyla Yu-Swanson | Uses <a href="https://dog.ceo/dog-api/">Dog API</a> 
         and <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>
       </p>
     </footer>

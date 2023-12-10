@@ -6,6 +6,12 @@ This is the CSS file page for my page that generates a dog playlist.
 It is used to style the page's playlist view. 
 */
 
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 div > figure {
   max-width: 500px;
   margin: 25px auto 0px auto;

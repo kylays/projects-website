@@ -35,6 +35,10 @@ main > div {
   width: 75%;
 }
 
+main {
+  min-width: 705px;
+}
+
 /*---------------------------------Text--------------------------------------*/
 hr {
   background-color: black;
@@ -98,8 +102,8 @@ h3 {
 
 /*------------------------------Navigation Bar-------------------------------*/
 nav {
-  width: 13%;
-  min-width: 125px;
+  width: 15%;
+  min-width: 175px;
 }
 
 nav > h2 {
@@ -107,6 +111,17 @@ nav > h2 {
 }
 
 nav > ul {
-  padding-left: 25%;
-  padding-right: 5%;
+  padding-right: 10%;
+}
+
+/*------------------------------Wireframe Image------------------------------*/
+.wireframe > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.wireframe {
+  width: 80%;
+  min-width: 400px;
+  margin: 10px;
 }
