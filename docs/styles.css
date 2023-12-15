@@ -60,8 +60,12 @@ footer, nav > h2, header > h1 {
 
 a, a:visited {
   color: rgb(0, 66, 57);
-  /* text-decoration: none; */
+  text-decoration: none;
   font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 nav > ul > li > a, nav > ul > li > a:visited {
